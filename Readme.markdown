@@ -18,7 +18,7 @@ You may use DynamicCsToPowerShell under the terms of the MIT License.
 
 ##Source Code:
 
-<https://github.com/fredericaltorres/DynamicCsToPowerShell>
+<https://github.com/fredericaltorres/DynamicCsToPowerShell-Library>
 
 ## History
 
