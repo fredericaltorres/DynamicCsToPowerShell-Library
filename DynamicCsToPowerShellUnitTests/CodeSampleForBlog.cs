@@ -13,6 +13,8 @@ namespace CodeSampleForBlogUnitTests {
     [TestClass]
     public class Value {
 
+        const string powerShellScriptFolder =  @"C:\FredericTorres.Net.Src\DynamicCsToPowerShell\DynamicCsToPowerShell\DynamicCsToPowerShellUnitTests\PowerShell";
+
         [TestMethod]
         public void NormalWay() {
             
@@ -34,11 +36,12 @@ namespace CodeSampleForBlogUnitTests {
             int i1 = dpsc.i1;
 
             Assert.AreEqual(123, i1);
-        }        
+        }   
+ 
         [TestMethod]
         public void Dictionary_IntLoadFromFile() {
             
-            var ps1ConfigFile = @"C:\FredericTorres.Net.Src\DynamicCsToPowerShell\DynamicCsToPowerShellUnitTests\PowerShell\IntDictionary.ps1";
+            var ps1ConfigFile = @"{0}\IntDictionary.ps1".format(powerShellScriptFolder);
             var dpsc   = DynamicPowerShellContext.Create();
             dpsc.LoadFile(ps1ConfigFile).Run();
 

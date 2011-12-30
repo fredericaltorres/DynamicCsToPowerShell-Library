@@ -59,6 +59,15 @@ namespace DynamicCsToPowerShell {
             Collection<PSObject> r =  this._psRt.Invoke();
             return this;
         }
+        public override bool TryGetIndex(GetIndexBinder binder, object[] indexes, out object result) {
+            
+            result = this._psRt.Runspace.SessionStateProxy.GetVariable(indexes[0].ToString());
+
+            if((result.GetType().IsArray)||(result is Hashtable))
+                result = new DynamicInstance(result);
+                
+            return true;
+        }
         /// <summary>
         /// Get a global variable value from the JavaScript context
         /// </summary>
