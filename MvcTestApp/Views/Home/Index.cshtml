@@ -1,16 +1,14 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
-
-<h2>@ViewBag.Message</h2>
-<h3>
-AppTitle:@ViewBag.ApplicationTitle
-AppVersion:@ViewBag.ApplicationVersion
-Amount:@ViewBag.Amount
+﻿<h3>   
+    AppTitle:@ViewBag.ApplicationTitle <BR />
+    AppVersion:@ViewBag.ApplicationVersion <BR />
+    <BR />
+    SupportedDays:
+    @foreach (var d in ViewBag.SupportedDays) {
+        @: @d,
+    }
+    <BR />
+    @foreach (var u in ViewBag.Users) {
+        @: User:@u<br/>
+    }
 </h3>
-
-<p>
-    To learn more about ASP.NET MVC visit 
-    <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-</p>
 

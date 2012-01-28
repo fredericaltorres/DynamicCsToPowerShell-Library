@@ -1,0 +1,3 @@
+Dic = {
+    "Debug" : True
+}

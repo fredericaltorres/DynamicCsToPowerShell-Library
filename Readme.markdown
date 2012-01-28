@@ -25,3 +25,5 @@ You may use DynamicCsToPowerShell under the terms of the MIT License.
 	Date        Version Features/Bug Fixes
 	--------------------------------------------------------------------
     2011-12-24  0.1	   	Creation
+    2012-01-27  0.1		Added asp.net mvc sample
+    
